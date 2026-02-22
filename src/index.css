@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  :root {
+    --bg: #f8fafc;
+    --card-bg: #ffffff;
+    --text-primary: #0f172a;
+    --text-secondary: #64748b;
+    --border: #e2e8f0;
+    --accent: #4f46e5;
+    --accent-hover: #4338ca;
+    --accent-soft: #eef2ff;
+  }
+
+  [data-theme='dark'] {
+    --bg: #0f172a;
+    --card-bg: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --border: #334155;
+    --accent: #6366f1;
+    --accent-hover: #818cf8;
+    --accent-soft: #312e81;
+  }
+
+  [data-theme='green'] {
+    --bg: #f0fdf4;
+    --card-bg: #ffffff;
+    --text-primary: #064e3b;
+    --text-secondary: #059669;
+    --border: #d1fae5;
+    --accent: #10b981;
+    --accent-hover: #059669;
+    --accent-soft: #dcfce7;
+  }
+
+  [data-theme='blue'] {
+    --bg: #f0f9ff;
+    --card-bg: #ffffff;
+    --text-primary: #0c4a6e;
+    --text-secondary: #0284c7;
+    --border: #e0f2fe;
+    --accent: #0ea5e9;
+    --accent-hover: #0284c7;
+    --accent-soft: #e0f2fe;
+  }
+
+  body {
+    @apply font-sans antialiased transition-colors duration-300;
+    background-color: var(--bg);
+    color: var(--text-primary);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-200 rounded-full hover:bg-slate-300 transition-colors;
+}
+
+.card-theme {
+  background-color: var(--card-bg);
+  border-color: var(--border);
+}
+
+.text-primary-theme { color: var(--text-primary); }
+.text-secondary-theme { color: var(--text-secondary); }
+.border-theme { border-color: var(--border); }
+.bg-accent-theme { background-color: var(--accent); }
+.bg-accent-soft-theme { background-color: var(--accent-soft); }
+.text-accent-theme { color: var(--accent); }

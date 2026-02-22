@@ -1,0 +1,5 @@
+{
+  "name": "Smart Fingerprint Attendance System",
+  "description": "A comprehensive biometric attendance system with timetable integration, real-time tracking, and advanced analytics.",
+  "requestFramePermissions": []
+}
